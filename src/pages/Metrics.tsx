@@ -5,6 +5,7 @@ import { Metric } from "../Models/Metric";
 import { SortUtils } from "../utils/sort";
 
 import { toast, ToastContainer } from 'react-toastify';
+import SkeletonWrapper from "../components/Skeleton";
 
 interface IState{
   data: Metric[]
@@ -44,9 +45,7 @@ class MetricsPage extends React.Component<{}, IState>{
       }
     )
   }
-
-  
-
+  //method useless in a real case scenario
   checkPresence = (origin: Metric[] | undefined, id: string) => {
     if (origin && origin.some((el: Metric) => el.id === id)) {
       return true
@@ -85,7 +84,6 @@ class MetricsPage extends React.Component<{}, IState>{
       position: toast.POSITION.BOTTOM_CENTER
     });
   }
-
 
   render(): React.ReactNode {
       const createItem = (item:Metric) =>{
@@ -131,19 +129,21 @@ class MetricsPage extends React.Component<{}, IState>{
         <>
           <button onClick={() => { this.addEmptyDataSet() }}>add new metric</button>
           {
-          this.state.data.length && this.state.data.map((item: Metric, index: number, array: Metric[]) => {
-            return (
-              <FormComponent
-                key={item.id}
-                create={createItem}
-                update={updateItem}
-                delete={deleteItem}
-                data={item}
-                isNew={this.checkPresence(this.state.mapStatus, item.id)} 
-                />
-                
-            )
-          })
+          this.state.data.length 
+          ? this.state.data.map((item: Metric, index: number, array: Metric[]) => {
+              return (
+                <FormComponent
+                  key={item.id}
+                  create={createItem}
+                  update={updateItem}
+                  delete={deleteItem}
+                  data={item}
+                  isNew={this.checkPresence(this.state.mapStatus, item.id)} 
+                  />
+                  
+              )
+            })
+          : <SkeletonWrapper/>
         }
          <ToastContainer />
         </>

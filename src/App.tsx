@@ -7,6 +7,7 @@ import MetricsPage from './pages/Metrics';
 import IndexPage from './pages/Index';
 import Header from './components/Header';
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function App() {
   return (

@@ -10,7 +10,6 @@ interface FormProps {
   isNew?: boolean
 }
 
-
 const FormComponent = (props: FormProps) => {
   const { control, register, handleSubmit, getValues } = useForm()
   const { fields, append, remove } = useFieldArray({
@@ -52,7 +51,6 @@ const FormComponent = (props: FormProps) => {
       data: updatedData.date 
     }
   }
-
 
   const renderActions = () =>{
     if(!props.isNew){
@@ -111,8 +109,6 @@ const FormComponent = (props: FormProps) => {
           props.delete && props.delete(props.data.id)
         }}>delete</button>
     </form>
-
-
   )
 }
 
