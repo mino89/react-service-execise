@@ -6,7 +6,6 @@ import { toast, ToastContainer } from 'react-toastify';
 import ChartComponent from "../components/Chart";
 import SkeletonWrapper from "../components/Skeleton";
 
-
 interface IState {
   data: Metric[]
 }
