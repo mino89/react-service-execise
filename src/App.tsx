@@ -6,6 +6,7 @@ import { AppProvider } from './context/AppContext';
 import MetricsPage from './pages/Metrics';
 import IndexPage from './pages/Index';
 import Header from './components/Header';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
