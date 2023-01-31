@@ -4,8 +4,7 @@ import Chart from 'react-google-charts';
 import { Metric } from "../Models/Metric";
 import { CalcUtils } from "../utils/calc";
 import { SortUtils } from "../utils/sort";
-
-
+import Styles from "../Styles/components/chart.module.scss"
 
 interface IChart {
   data: Metric[],
@@ -15,6 +14,7 @@ const ChartComponent = (props: IChart) => {
   const [chart, setChart] = useState< (string|number|undefined)[][]>([])
   const options = {
     curveType: "function",
+    
   };
 
   useEffect(()=>{
@@ -50,18 +50,23 @@ const ChartComponent = (props: IChart) => {
 
   return (
     <>
-
+    <div className={Styles.chartWrapper}>
     <Chart
       chartType="Line"
       width="100%"
-      height="400px"
+      height="40vh"
       data={chart}
       options={options}
     />
+    </div>
+    <div className="container">
+    <h1>Filter your metrics</h1>
     <button onClick={()=>setMax()}>max</button>
     <button onClick={()=>setMedian()}>median</button>
     <button onClick={()=>setMin()}>min</button>
     <button onClick={()=>reset()}>reset</button>
+    </div>
+    
     </>
   )
 

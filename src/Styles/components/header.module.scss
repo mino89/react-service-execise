@@ -1,0 +1,26 @@
+@import '../variables.scss';
+
+.header{
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--space-unit) / 4);
+  ul{
+    list-style: none;
+    display: flex;
+    li{
+      padding: calc(var(--space-unit) / 2);
+      a{
+        color: var(--color-lights);
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.logo{
+  height: calc(var(--space-unit) *3);
+  width: calc(var(--space-unit) *3);
+}

@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+
+.footer{
+  padding: calc(var(--space-unit) / 4) calc(var(--space-unit) / 2);
+  background-color: var(--color-lights-variation);
+  margin-top: auto;
+}

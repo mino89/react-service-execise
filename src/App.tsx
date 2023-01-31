@@ -7,8 +7,8 @@ import MetricsPage from './pages/Metrics';
 import IndexPage from './pages/Index';
 import Header from './components/Header';
 import 'react-toastify/dist/ReactToastify.css';
-import 'react-loading-skeleton/dist/skeleton.css'
-
+import './Styles/globals.scss';
+import Footer from './components/Footer';
 function App() {
   return (
     <AppProvider>
@@ -17,6 +17,7 @@ function App() {
         <Route index element={<IndexPage />} />
         <Route path="/metrics" element={<MetricsPage />} />
       </Routes>
+      <Footer/>
     </AppProvider>
   );
 }

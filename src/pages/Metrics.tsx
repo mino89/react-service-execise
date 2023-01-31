@@ -126,8 +126,9 @@ class MetricsPage extends React.Component<{}, IState>{
         )
       }
       return(
-        <>
-          <button onClick={() => { this.addEmptyDataSet() }}>add new metric</button>
+        <div className="container">
+          <h1>Manage your metrics</h1>
+          <button onClick={() => { this.addEmptyDataSet() }}> + add new metric</button>
           {
           this.state.data.length 
           ? this.state.data.map((item: Metric, index: number, array: Metric[]) => {
@@ -143,10 +144,10 @@ class MetricsPage extends React.Component<{}, IState>{
                   
               )
             })
-          : <SkeletonWrapper/>
+          : <><SkeletonWrapper/><SkeletonWrapper/><SkeletonWrapper/></>
         }
          <ToastContainer />
-        </>
+        </div>
       )
   }
 }

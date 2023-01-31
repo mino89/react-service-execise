@@ -1,0 +1,16 @@
+@import './variables.scss';
+@import './buttons.scss';
+@import './forms.scss';
+@import './card.scss';
+@import './containers.scss';
+body{
+  background-color: var(--color-lights);
+  color: var(--color-shadows);
+
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}

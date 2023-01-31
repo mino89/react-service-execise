@@ -1,0 +1,17 @@
+:root{
+  --color-primary: rgb(0, 140, 255);
+  --color-lights: #fff;
+  --color-lights-variation: #f1f1f1;
+  --color-shadows: #2c2c2c;
+  --color-danger: #ff4444;
+  --color-success: #06b800;
+  --space-unit: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --color-lights: #2c2c2c;
+    --color-lights-variation: #323232;
+    --color-shadows: #fff;
+  }
+}

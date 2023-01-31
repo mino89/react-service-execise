@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+.chartWrapper{
+  padding: var(--space-unit);
+  @media (prefers-color-scheme: dark) {
+  background-color: var(--color-shadows);
+  }
+}

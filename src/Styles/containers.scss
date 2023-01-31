@@ -1,0 +1,8 @@
+.container{
+  width: 80vw;
+  margin: 0 auto;
+  padding: var(--space-unit);
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+}
