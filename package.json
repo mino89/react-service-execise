@@ -28,7 +28,7 @@
     "eject": "react-scripts eject",
     "up:patch": "npm version patch",
     "up:minor": "npm version minor",
-    "up:major": "npm version minor"
+    "up:major": "npm version major"
   },
   "eslintConfig": {
     "extends": [
